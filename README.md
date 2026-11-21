@@ -6,7 +6,7 @@
 
 ## التقنية
 
-- Next.js 14 App Router وReact 18 وTypeScript strict.
+- Next.js 15 App Router وReact 18 وTypeScript strict.
 - Tailwind CSS 3 مع رموز تصميم محلية في `app/globals.css`.
 - Framer Motion لحركة محدودة في مؤشر التنقل، وLucide React للأيقونات.
 - RTL من اليمين إلى اليسار، مع خط النظام ودعم Safe Area.
@@ -14,7 +14,7 @@
 
 ## التشغيل المحلي
 
-يتطلب Node.js 18.17 أو أحدث.
+يتطلب أحد إصدارات Node.js المدعومة من LTS: 22.x أو 24.x أو 26.x.
 
 ```bash
 npm install
