@@ -2,15 +2,17 @@ import { UserRound } from "lucide-react";
 import { PlaceholderScreen } from "@/components/shared/PlaceholderScreen";
 
 type ProfilePageProps = {
-  params: { username: string };
+  params: Promise<{ username: string }>;
 };
 
-export function generateMetadata({ params }: ProfilePageProps) {
-  return { title: params.username === "me" ? "الشخصية" : "ملف محقق" };
+export async function generateMetadata({ params }: ProfilePageProps) {
+  const { username } = await params;
+  return { title: username === "me" ? "الشخصية" : "ملف محقق" };
 }
 
-export default function ProfilePage({ params }: ProfilePageProps) {
-  const ownProfile = params.username === "me";
+export default async function ProfilePage({ params }: ProfilePageProps) {
+  const { username } = await params;
+  const ownProfile = username === "me";
 
   return (
     <PlaceholderScreen
